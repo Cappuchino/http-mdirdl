@@ -1,0 +1,8 @@
+if [ -z  "$@" ]
+then
+    echo "HTTP Mass Directory Download script by Cup o' Chino"
+    echo "No arguments entered, exiting."
+else
+    echo "HTTP Mass Directory Download script by Cup o' Chino"
+    wget -q --show-progress -rkpN --no-parent -nH --cut-dirs=0 -X /_autoindex,/icons --reject "index.html*" $@
+fi
